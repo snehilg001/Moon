@@ -18,15 +18,15 @@ let moonDia = 0;
 let circles = [];
 let hearts = [];
 let xaxis;
-// let start = false;
+let start = false;
 
-// function startShow(){
-//   let stb = document.querySelector("#startButton");
-//   stb.style.opacity = "0";
-//   let audio = document.querySelector("audio");
-//   audio.play();
-//   start = true;
-// }
+function startShow(){
+  let stb = document.querySelector("#startButton");
+  stb.style.opacity = "0";
+  let audio = document.querySelector("audio");
+  audio.play();
+  start = true;
+}
 
 function preload() {
   img = loadImage('texture32.png');
@@ -75,7 +75,7 @@ function setup() {
 }
 
 function draw() {
-  // if(start){
+  if(start){
     clear();
     background(0);
     
@@ -107,5 +107,5 @@ function draw() {
     image(moonImg, width/2, height/2, moonDia, moonDia);
     pop();
    
-  // }
+  }
 }
