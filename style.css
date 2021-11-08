@@ -1,0 +1,108 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+#canvasDiv{
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#audioDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.noteDiv{
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.creditsDiv{
+  margin-top: 10px;
+  background: #efffef;
+  color: #555;
+  padding: 20px 10px 20px 10px;
+}
+.credits{
+  text-align: center;
+}
+.last{
+  color: #999;
+}
+
+#startButton{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 0px #333;
+  transition: box-shadow 0.3s, width 0.3s, height 0.3s,
+              left 0.3s, top 0.3s, opacity 1s;
+  position: fixed;
+  top: 40%;
+  left: 35%;
+}
+#startButton:active{
+  box-shadow: 0px 0px 100px 0px #333;
+  width: 180px;
+  height: 180px;
+  left: 25%;
+  top: 35%;
+}
+#startButton > div{
+  border-top: 50px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 100px solid #efd;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  top: 0px;
+  left: 10px;
+  transition: top 0.3s, left 0.3s;
+}
+#startButton > div:active{
+  top: 40px;
+  left: 50px;
+}
+#startButton > div > div{
+  width: 90px;
+  position: relative;
+  top: -15px;
+  left: -90px;
+  font-size: 21px;
+}
+
+#startButton > div > div, .noteDiv, .creditsDiv {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+::-webkit-scrollbar{
+  width: 0.5em;
+  height: 0.5em;
+}
+
+::-webkit-scrollbar-track{
+  border-radius: 50vh;
+  margin-block: 0.5em;
+  margin-inline: 0.5em;
+  background: #def;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #7c9;
+  border-radius: 50vh;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6a8;
+}
